@@ -1,1 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: ExeIDfirst-pipeline  
+  annotations:
+    scenarios.ai.sap.com/description: " 4Nov1419 Descr to SAP AI Core Scenario"
+    scenarios.ai.sap.com/name: "GAI1126A Scenario name"
+    executables.ai.sap.com/description: "4Nov1419 Executable Descr"
+    executables.ai.sap.com/name: "GAI1126A AI Exec Name"
+  labels:
+    scenarios.ai.sap.com/id: "ScenarioIDAI"
+    ai.sap.com/version: "1.0.0"
+spec:
+ 
+  entrypoint: mypipeline
+  templates:
+  - name: mypipeline
+    steps:
+    - - name: greet
+        template: greeter
 
+  - name: greeter
+    container:
+      image: docker.io/python:latest
+      command:
+        - python3
+        - '-c'
+      args:
+       - |
+        print("Hello from SAP AI Core")
