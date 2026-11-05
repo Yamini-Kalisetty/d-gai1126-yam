@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: ExeIDfirst-test2  
+  name: ExeIDfirst-pipeline2  
   annotations:
-    scenarios.ai.sap.com/description: " 4Nov1419 Descr to SAP AI Core Scenario"
-    scenarios.ai.sap.com/name: "GAI1126A Scenario inimay"
-    executables.ai.sap.com/description: "4Nov1419 Executable Descr"
-    executables.ai.sap.com/name: "GAI1126A AI Exec inimay"
+    scenarios.ai.sap.com/description: " 5Nov1419 Descr to SAP AI Core Scenario"
+    scenarios.ai.sap.com/name: "GAI1126A Scenario name2"
+    executables.ai.sap.com/description: "5Nov1419 Executable Descr"
+    executables.ai.sap.com/name: "GAI1126A AI Exec Name2"
   labels:
-    scenarios.ai.sap.com/id: "ScenarioIDAI"
-    ai.sap.com/version: "1.0.2"
+    scenarios.ai.sap.com/id: "ScenarioIDAI2"
+    ai.sap.com/version: "1.0.0"
 spec:
  
-  entrypoint: inimaypipeline
+  entrypoint: mypipeline
   templates:
-  - name: inimaypipeline
+  - name: mypipeline
     steps:
     - - name: greet
         template: greeter
@@ -27,4 +27,4 @@ spec:
         - '-c'
       args:
        - |
-         print("Hello from SAP AI Core")
+        print("Hello from SAP AI Core")
