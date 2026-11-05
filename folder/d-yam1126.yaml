@@ -9,7 +9,7 @@ metadata:
     executables.ai.sap.com/name: "GAI1126A AI Exec inimay"
   labels:
     scenarios.ai.sap.com/id: "ScenarioIDAI"
-    ai.sap.com/version: "1.0.0"
+    ai.sap.com/version: "1.0.1"
 spec:
  
   entrypoint: inimaypipeline
