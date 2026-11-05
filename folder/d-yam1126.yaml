@@ -1,20 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: ExeIDfirst-pipeline  
+  name: ExeIDfirst-inimay  
   annotations:
     scenarios.ai.sap.com/description: " 4Nov1419 Descr to SAP AI Core Scenario"
-    scenarios.ai.sap.com/name: "GAI1126A Scenario name"
+    scenarios.ai.sap.com/name: "GAI1126A Scenario inimay"
     executables.ai.sap.com/description: "4Nov1419 Executable Descr"
-    executables.ai.sap.com/name: "GAI1126A AI Exec Name"
+    executables.ai.sap.com/name: "GAI1126A AI Exec inimay"
   labels:
     scenarios.ai.sap.com/id: "ScenarioIDAI"
     ai.sap.com/version: "1.0.0"
 spec:
  
-  entrypoint: mypipeline
+  entrypoint: inimaypipeline
   templates:
-  - name: mypipeline
+  - name: inimaypipeline
     steps:
     - - name: greet
         template: greeter
