@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: ExeIDfirst-pipeline2  
+  name: ExeIDfirst-pipeline05  
   annotations:
     scenarios.ai.sap.com/description: " 5Nov1419 Descr to SAP AI Core Scenario"
-    scenarios.ai.sap.com/name: "GAI1126A Scenario name2"
+    scenarios.ai.sap.com/name: "GAI1126A Scenario name05"
     executables.ai.sap.com/description: "5Nov1419 Executable Descr"
-    executables.ai.sap.com/name: "GAI1126A AI Exec Name2"
+    executables.ai.sap.com/name: "GAI1126A AI Exec Name05"
   labels:
-    scenarios.ai.sap.com/id: "ScenarioIDAI2"
+    scenarios.ai.sap.com/id: "ScenarioIDAI05"
     ai.sap.com/version: "1.0.0"
 spec:
  
