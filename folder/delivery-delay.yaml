@@ -16,7 +16,7 @@ metadata:
 
 spec:
   imagePullSecrets:
-    - name: yam1126-docker-t01
+    - name: gai1126-yam
 
   entrypoint: training-pipeline
 
