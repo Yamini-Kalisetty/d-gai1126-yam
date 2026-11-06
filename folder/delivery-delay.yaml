@@ -11,7 +11,7 @@ metadata:
     executables.ai.sap.com/description: "yam1126Train, evaluate and predict delivery delay"
 
   labels:
-    scenarios.ai.sap.com/id: "yam1126-supplier-intelligence-t05"
+    scenarios.ai.sap.com/id: "yam1126supplierintelligencet05"
     ai.sap.com/version: "1.0.4"
 
 spec:
