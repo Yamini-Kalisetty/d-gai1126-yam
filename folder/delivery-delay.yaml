@@ -1,0 +1,45 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+
+metadata:
+  name: faith-delivery-delay-train-t01
+
+  annotations:
+    scenarios.ai.sap.com/name: "FAITH Supplier Intelligence T01"
+    scenarios.ai.sap.com/description: "Delivery delay prediction using mock data"
+    executables.ai.sap.com/name: "Delivery Delay Training"
+    executables.ai.sap.com/description: "Train, evaluate and predict delivery delay"
+
+  labels:
+    scenarios.ai.sap.com/id: "faith-supplier-intelligence-t01"
+    ai.sap.com/version: "1.0.1"
+
+spec:
+  imagePullSecrets:
+    - name: faith-docker-t01
+
+  entrypoint: training-pipeline
+
+  templates:
+    - name: training-pipeline
+      steps:
+        - - name: train-delivery-model
+            template: training-container
+
+    - name: training-container
+      metadata:
+        labels:
+          ai.sap.com/resourcePlan: starter
+
+      container:
+        image: docker.io/raajgk77/gai1126a-delivery-delay:day4-v1
+
+        command:
+          - python
+
+        args:
+          - /app/src/main.py
+
+        env:
+          - name: OUTPUT_DIR
+            value: /app/output
