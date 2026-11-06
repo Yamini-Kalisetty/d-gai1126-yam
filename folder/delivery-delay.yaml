@@ -5,18 +5,18 @@ metadata:
   name: yam1126-delivery-delay-train-t01
 
   annotations:
-    scenarios.ai.sap.com/name: "FAITH Supplier Intelligence T01"
-    scenarios.ai.sap.com/description: "Delivery delay prediction using mock data"
-    executables.ai.sap.com/name: "Delivery Delay Training"
-    executables.ai.sap.com/description: "Train, evaluate and predict delivery delay"
+    scenarios.ai.sap.com/name: "yam1126 Supplier Intelligence T01"
+    scenarios.ai.sap.com/description: "yam1126Delivery delay prediction using mock data"
+    executables.ai.sap.com/name: "yam1126Delivery Delay Training"
+    executables.ai.sap.com/description: "yam1126Train, evaluate and predict delivery delay"
 
   labels:
-    scenarios.ai.sap.com/id: "faith-supplier-intelligence-t05"
+    scenarios.ai.sap.com/id: "yam1126-supplier-intelligence-t05"
     ai.sap.com/version: "1.0.4"
 
 spec:
   imagePullSecrets:
-    - name: faith-docker-t01
+    - name: yam1126-docker-t01
 
   entrypoint: training-pipeline
 
