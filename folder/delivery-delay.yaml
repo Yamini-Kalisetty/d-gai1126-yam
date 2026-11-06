@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 
 metadata:
-  name: faith-delivery-delay-train-t01
+  name: yam1126-delivery-delay-train-t01
 
   annotations:
     scenarios.ai.sap.com/name: "FAITH Supplier Intelligence T01"
@@ -11,8 +11,8 @@ metadata:
     executables.ai.sap.com/description: "Train, evaluate and predict delivery delay"
 
   labels:
-    scenarios.ai.sap.com/id: "faith-supplier-intelligence-t01"
-    ai.sap.com/version: "1.0.1"
+    scenarios.ai.sap.com/id: "faith-supplier-intelligence-t05"
+    ai.sap.com/version: "1.0.4"
 
 spec:
   imagePullSecrets:
