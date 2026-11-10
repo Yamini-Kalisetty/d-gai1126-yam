@@ -2,16 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 
 metadata:
-  name: yam1126-delivery-delay-train-t01
+  name: yam1126-delivery-delay-train-t54
 
   annotations:
-    scenarios.ai.sap.com/name: "yam1126 Supplier Intelligence T01"
-    scenarios.ai.sap.com/description: "yam1126Delivery delay prediction using mock data"
+    scenarios.ai.sap.com/name: "yam1126 aws T54"
+    scenarios.ai.sap.com/description: "yam1126Delivery aws using mock data"
     executables.ai.sap.com/name: "yam1126Delivery Delay Training"
     executables.ai.sap.com/description: "yam1126Train, evaluate and predict delivery delay"
 
   labels:
-    scenarios.ai.sap.com/id: "yam1126supplierintelligencet05"
+    scenarios.ai.sap.com/id: "yam1126supplierintelligencet54"
     ai.sap.com/version: "1.0.6"
 
 spec:
