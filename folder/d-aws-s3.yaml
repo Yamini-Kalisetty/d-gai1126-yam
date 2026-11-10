@@ -2,21 +2,21 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 
 metadata:
-  name: yam1126-delivery-delay-train-t54
+  name: faith-delivery-delay-train-t01
 
   annotations:
-    scenarios.ai.sap.com/name: "yam1126 aws T54"
-    scenarios.ai.sap.com/description: "yam1126Delivery aws using mock data"
-    executables.ai.sap.com/name: "yam1126Delivery Delay Training"
-    executables.ai.sap.com/description: "yam1126Train, evaluate and predict delivery delay"
+    scenarios.ai.sap.com/name: "FAITH Supplier Intelligence T01"
+    scenarios.ai.sap.com/description: "Delivery delay prediction using mock data"
+    executables.ai.sap.com/name: "Delivery Delay Training"
+    executables.ai.sap.com/description: "Train, evaluate and predict delivery delay"
 
   labels:
-    scenarios.ai.sap.com/id: "yam1126supplierintelligencet54"
-    ai.sap.com/version: "1.0.6"
+    scenarios.ai.sap.com/id: "faith-supplier-intelligence-t01"
+    ai.sap.com/version: "1.0"
 
 spec:
   imagePullSecrets:
-    - name: gai1126-yam
+    - name: faith-docker-t01
 
   entrypoint: training-pipeline
 
@@ -32,7 +32,7 @@ spec:
           ai.sap.com/resourcePlan: starter
 
       container:
-        image: docker.io/raajgk77/gai1126a-delivery-delay:day4-v1
+        image: docker.io/raajgk77/faith-delivery-delay:day4-v1
 
         command:
           - python
