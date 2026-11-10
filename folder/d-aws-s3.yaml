@@ -2,21 +2,21 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 
 metadata:
-  name: faith-delivery-delay-train-t01
+  name: faith-delivery-delay-train-t54
 
   annotations:
-    scenarios.ai.sap.com/name: "FAITH Supplier Intelligence T01"
-    scenarios.ai.sap.com/description: "Delivery delay prediction using mock data"
-    executables.ai.sap.com/name: "Delivery Delay Training"
+    scenarios.ai.sap.com/name: "FAITH Supplier Intelligence T54"
+    scenarios.ai.sap.com/description: "d-1126yampredictionaws"
+    executables.ai.sap.com/name: "1126yam-Delivery Delay Trainingaws"
     executables.ai.sap.com/description: "Train, evaluate and predict delivery delay"
 
   labels:
-    scenarios.ai.sap.com/id: "faith-supplier-intelligence-t01"
-    ai.sap.com/version: "1.0"
+    scenarios.ai.sap.com/id: "faith-supplier-intelligence-t54"
+    ai.sap.com/version: "1.0.8"
 
 spec:
   imagePullSecrets:
-    - name: faith-docker-t01
+    - name: faith-docker-t54
 
   entrypoint: training-pipeline
 
